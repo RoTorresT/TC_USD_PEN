@@ -7,6 +7,18 @@ import os
 import re
 import json 
 
+from selenium import webdriver
+from selenium.webdriver.chrome.options import Options
+
+
+chrome_options = Options()
+chrome_options.add_argument("--headless")
+
+chrome_driver = os.path.join(os.getcwd(),  "headers/chromedriver")
+
+wd = webdriver.Chrome(options=chrome_options,
+                          executable_path=chrome_driver)
+  
 wd = webdriver.Chrome('chromedriver',options=options)
 
 # open it, go to a website, and get results
@@ -16,6 +28,9 @@ date = datetime.now()-timedelta(hours = 5)
 wd.get('https://cuantoestaeldolar.pe')
 page_source = wd.page_source
 wd.quit
+
+
+
 
 soup = BeautifulSoup(page_source, 'html.parser')
 
