@@ -25,9 +25,6 @@ wd.get('https://cuantoestaeldolar.pe')
 page_source = wd.page_source
 wd.quit
 
-
-
-
 soup = BeautifulSoup(page_source, 'html.parser')
 
 #extract casas de cambio
