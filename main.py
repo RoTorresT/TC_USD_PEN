@@ -15,10 +15,7 @@ chrome_options.add_argument("--headless")
 
 chrome_driver = os.path.join(os.getcwd(),  "headers/chromedriver")
 
-wd = webdriver.Chrome(options=chrome_options,
-                          executable_path=chrome_driver)
-  
-wd = webdriver.Chrome('chromedriver',options=options)
+wd = webdriver.Chrome(options=chrome_options, executable_path=chrome_driver)
 
 # open it, go to a website, and get results
 
