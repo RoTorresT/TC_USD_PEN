@@ -24,9 +24,6 @@ jobs:
         run: |
 
           pip install -r r.txt
-          apt install chromium-chromedriver
-          cp /usr/lib/chromium-browser/chromedriver /usr/bin
-          
           python main.py
           
       - name: commit my files
