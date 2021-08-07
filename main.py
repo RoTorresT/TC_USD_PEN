@@ -1,7 +1,6 @@
 from tqdm import tqdm
 from bs4 import BeautifulSoup
 from datetime import datetime, timedelta
-import pandas as pd
 from selenium import webdriver
 import os
 import re
