@@ -50,9 +50,11 @@ for i in x:
   info_now[datetime_str][i[0]] = {}
   
   compra_aux = re.findall('^\d.\d?\d?\d?\d', i[1])
+  print(compra_aux)
   info_now[datetime_str][i[0]]["compra"] = float(compra_aux[0])
 
   venta_aux = re.findall('\d.\d?\d?\d?\d?\d$', i[1])
+  print(venta_aux)
   info_now[datetime_str][i[0]]["venta"] = float(venta_aux[0])
 
 if os.path.exists('r/r.json'):
