@@ -67,7 +67,6 @@ if os.path.exists('r/r.json'):
 
   print('ga1')
 
-
 else:
   os.mkdir('r/')
   with open('r/r.json', 'w') as f:
