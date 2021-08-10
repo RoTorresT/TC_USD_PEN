@@ -31,8 +31,7 @@ soup = BeautifulSoup(page_source, 'html.parser')
 
 date = datetime.now()-timedelta(hours = 5)
 
-x = soup.find('div', attrs = {'class' : 'clear-fix block-online-change'})
-x = x.find_all('div', attrs = {'class' : 'wrapper-table tb_dollar'})
+x = soup.find('div', attrs = {'class' : 'clear-fix block-online-change'}).find_all('div', attrs = {'class' : 'wrapper-table tb_dollar'})
 
 x = [w.get_text() for w in x]
 x = [w.strip() for w in x]
