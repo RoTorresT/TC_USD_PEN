@@ -74,4 +74,3 @@ else:
     json.dump(info_now, f)
 
   print('ga')
-  
