@@ -5,7 +5,7 @@ on:
   push:
     branches: [ main ]
   schedule:
-    - cron: '* * * * *' # runs at every 1 min
+    - cron: '*/5 * * * 1-5' # runs at every 1 min
 
 jobs:
   scraper:
